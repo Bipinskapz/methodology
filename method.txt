@@ -1,0 +1,196 @@
+Recon OSINT
+===========
+securityheader.com
+dnsdumpster.com
+www.kitterman.com/spfvalidate.html?
+tools.whoisxmlapi.com/login (give the email addr from whois lookup of the target & this site will give all the domains registered with that email)
+D0rk - site:s3.amazonaws.com intitle:index.of.bucket
+	site:amazonaws.com inurl:".s3.amazonaws.com"
+	site:s3.amazonaws.com <target>
+securitytrails.com/list/apex_domain/<subdomain>
+insite:"<org> &copy 2020
+whoisology.com
+dehashed.com
+https://pentest-tools.com/information-gathering/google-hacking#
+
+
+wayback
+=======
+ReconCat (daudmalik06- get wayback screen shoot of a url at any year)
+waybackunifier
+web.archive.org
+waybackurl
+
+
+WAF
+===
+wafw00f (WAF detection)
+
+
+Subdomain takeover
+==================
+subjack
+subover
+takeover-v1
+subzy
+
+
+Misc
+====
+arjun (s0md3v-github)
+Interlace (codingo -github, multithreading of any tool)
+Parameth (parameter brute)
+chrome ua spoofer plugin
+
+
+Fingerprinting
+==============
+whatweb
+wappalyzer
+shodan plugin (chrome)
+
+
+Recon tools
+===========
+recon ++ (aaron)
+censys-enumeration (0xbharath-github)
+googd0rker
+goohak
+scantastic-tool
+virtual-host-discovery (jobertabma)
+         |-> ruby scan.rb --ip=<ip> --host=<domain>
+
+
+
+Inbuilt Wordlist
+================
+commonspeak wordlist (github)
+api_wordlist (github)
+buddhalabs packetstorm-exploits(github)
+milo2012 pathbrute (github)
+
+
+Custom wordlist
+===============
+Analyse source code for endpoints
+break all subdomains for words
+Find endpoints from waybacks
+
+
+Wordlist generator
+==================
+altdns (github)
+dnsgen
+
+
+Git recon
+=========
+gitrob
+git-all-secrets
+github-search
+shhgit
+trufflehog
+gitGraber
+git-secret
+repo-supervisor
+git-contributors.py
+git-dorks.py
+git-employees.py
+
+
+Javascript
+==========
+js parser
+retire js
+relative-url-extractor (jobert abma)
+linkfinder
+getJs
+Inputscanner
+js-scan
+cloudscraper.py (looks for s3 buckets(cloud resources) in js files)
+
+
+Reference & gits
+================
+Edoverflow (gist & github)
+Tomnomnom (github)
+Patrik (github)
+
+
+Command snippets
+================
+dirsearch -e php,asp,aspx,jsp,py,txt,conf,config,bak,backup,swp,old,db,sql,log,xml,js,json -u <target_url>
+
+
+#list of subdomains resolving to internal ip
+--------------------------------------------
+cat <domain_list> | while read domain; do if host -t A "$domain" | awk '{print $NF}' | grep -E '^(192\.168\.|172\.1[6789]\.|172\.2[0-9]\.|172\.3[01]\.|10\.)'&>/dev/null;then echo $domain;fi done
+
+
+#all asn's of an ip 
+-------------------
+http://ip-api.com/json/<ip_addr> | jq -r.as
+
+
+#all ip range of an asn
+-----------------------
+whois -h whois.radb.net --'-i origin <asn>' | grep -Eo "([0-9.]+){4}/[0-9]+" | uniq
+
+
+#nmap for ip range of an asn
+----------------------------
+nmap --script targets-asn --script-args target-asn.asn=<asn> > ip.txt
+
+
+#nmap scan for all ip's
+-----------------------
+nmap -p- -sV -iL ip.txt -oX ip.xml 
+	or run masscan on all ip's
+
+
+#ffuf brute list of subdomain with list of paths
+------------------------------------------------
+ffuf -u https://HFUZZ/WFUZZ -w <host_list_path>:HFUZZ -w <path_list_path>:WFUZZ -mode clusterbomb
+
+ffuf -u https://adc.com/FUZZ/FUZZ/FUZZ -w wordlist1.txt -w wordlist2.txt -w wordlist3.txt -mode clusterbomb
+
+
+#fuzzing parameter values for uid,guid without burp intruder & excluding 401 responses
+--------------------------------------------------------------------------------------
+ffuf -w /path/to/parameters_value.txt -u https://target/script.php?valid_name=FUZZ -fc 401
+
+
+#fuzzing parameter names like uid,guid without burp intruder & excluding content length of 4242
+-----------------------------------------------------------------------------------------------
+ffuf -w /path/to/parameters_name.txt -u https://target/script.php?FUZZ=test_value -fs 4242
+
+
+#checks whether old js files are alive or not by looking at response code(200,404...)
+-------------------------------------------------------------------------------------
+cat js_urls.txt | parallel -j50 -q curl -w 'Status:%{http_code}\t Size:%{size_download}\t %{url_effective}\n' -o /dev/null -sk
+
+#check for ownership of an ip
+-----------------------------
+curl ipinfo.io <ip>
+
+
+./massdns/bin/massdns -r massdns/lists/resolvers.txt -t A -o S subdomains.txt > live.txt
+
+
+
+#api docs wordlist
+------------------
+application.wadl
+
+
+
+
+
+
+
+
+
+
+
+
+
