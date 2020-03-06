@@ -24,6 +24,11 @@ whoisology.com
 dehashed.com
 https://pentest-tools.com/information-gathering/google-hacking#
 
+Finding live hosts
+==================
+massdns
+httprobe
+
 Directory bruteforce
 ====================
 dirsearch
