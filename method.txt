@@ -134,7 +134,7 @@ cloudscraper.py (looks for s3 buckets(cloud resources) in js files)
 Reference & gits
 ================
 seclist(github)
-payload allt the things(github)
+payload allt the things(https://github.com/swisskyrepo/PayloadsAllTheThings)
 https://github.com/foospidy/payloads(collection of github pages for payloads)
 Edoverflow (gist & github)
 Tomnomnom (github)
