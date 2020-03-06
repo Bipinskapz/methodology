@@ -1,6 +1,8 @@
 Vulnerabilities
 ===============
 OWASP vulnerability cheatsheet(https://owasp.org/www-project-cheat-sheets/cheatsheets)
+OWASP attacks(https://owasp.org/www-community/attacks)
+OWASP vulnerabilities(https://owasp.org/www-community/vulnerabilities)
 
 Recon OSINT
 ===========
