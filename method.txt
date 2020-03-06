@@ -1,3 +1,7 @@
+Vulnerabilities
+===============
+OWASP vulnerability cheatsheet(https://owasp.org/www-project-cheat-sheets/cheatsheets)
+
 Recon OSINT
 ===========
 amass
