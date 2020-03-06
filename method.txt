@@ -1,5 +1,9 @@
 Recon OSINT
 ===========
+amass
+crtsh
+shodan
+findomain
 securityheader.com
 dnsdumpster.com
 www.kitterman.com/spfvalidate.html?
@@ -13,6 +17,10 @@ whoisology.com
 dehashed.com
 https://pentest-tools.com/information-gathering/google-hacking#
 
+Directory bruteforce
+====================
+dirsearch
+ffuf
 
 wayback
 =======
