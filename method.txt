@@ -1,5 +1,6 @@
 Vulnerabilities
 ===============
+Using burp to test for owasp top 10(https://portswigger.net/support/using-burp-to-test-for-the-owasp-top-ten)
 OWASP vulnerability cheatsheet(https://owasp.org/www-project-cheat-sheets/cheatsheets)
 OWASP attacks(https://owasp.org/www-community/attacks)
 OWASP vulnerabilities(https://owasp.org/www-community/vulnerabilities)
