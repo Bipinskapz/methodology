@@ -61,7 +61,7 @@ Misc
 arjun (s0md3v-github)
 Interlace (codingo -github, multithreading of any tool)
 Parameth (parameter brute)
-chrome ua spoofer plugin
+chrome user-agent spoofer plugin
 
 
 Fingerprinting
