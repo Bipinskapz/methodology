@@ -1,3 +1,10 @@
+Payloads
+========
+Seclists(github)
+payloadsallthethings(github)
+fuzzdb(github)
+payload collection(https://github.com/foospidy/payloads)
+
 Vulnerabilities
 ===============
 Using burp to test for owasp top 10(https://portswigger.net/support/using-burp-to-test-for-the-owasp-top-ten)
